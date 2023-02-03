@@ -14,9 +14,6 @@ export const ListContainer = ({type,navigation,categories,}) => {
   
   const [loading, setLoading] = useState(false);
   
-  const [page, setPage] = useState(1);
-  
-  const maxPages = useRef(1);
   
   const loadItems = async () => {
     setLoading(true);
@@ -24,15 +21,13 @@ export const ListContainer = ({type,navigation,categories,}) => {
       type,
       category,
       '',
-      page
     );
     setList(response.data.results);
-    maxPages.current = response.data.total_pages;
     setLoading(false);
   };
   useEffect(() => {
     loadItems();
-  }, [category, page]);
+  }, [category]);
 
   return (
     <VStack space={4} flex={1}>

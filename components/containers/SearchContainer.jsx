@@ -8,7 +8,6 @@ import { SearchForm } from '../forms/Forms';
 export const SearchContainer = ({ navigation }) => {
   const [items, setItems] = useState([]);
   const [itemType, setItemType] = useState();
-  const maxPages = useRef(1);
 
   const search = async (searchTerm, searchType) => {
     const response = await tmdbService(
@@ -19,7 +18,6 @@ export const SearchContainer = ({ navigation }) => {
 
     setItemType(searchType);
     setItems(response.data.results);
-    maxPages.current = response.data.total_pages;
   };
 
   return (

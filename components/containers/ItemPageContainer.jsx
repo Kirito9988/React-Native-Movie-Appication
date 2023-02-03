@@ -1,12 +1,6 @@
 import { AspectRatio,Box,Center,HStack,Image,Text} from 'native-base';
 
-export const ItemPageContainer = ({
-  title,
-  photo,
-  description,
-  popularity,
-  releaseDate,
-}) => {
+export const ItemPageContainer = ({title,photo,description,popularity,releaseDate}) => {
   return (
     <Box flex={2} paddingX={15}>
       
