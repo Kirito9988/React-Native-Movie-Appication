@@ -10,7 +10,7 @@ export const TvCard = ({ tv, navigation }) => {
    
     releaseDate={tv.first_air_date}
    
-    uri={`https://image.tmdb.org/t/p/w500/${tv.poster_path}`}
+    uri={tv.poster_path == null || tv.poster_path == undefined ? 'https://dummyimage.com/900x900/878787/ffffff&text=No+Poster+found' :  `https://image.tmdb.org/t/p/w500/${tv.poster_path}`}
    
     onDetailPress={() => {
    

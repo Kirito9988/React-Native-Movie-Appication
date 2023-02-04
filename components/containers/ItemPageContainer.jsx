@@ -15,9 +15,7 @@ export const ItemPageContainer = ({title,photo,description,popularity,releaseDat
         <AspectRatio w="70%" mt={2} ratio={1}>
     
           <Image resizeMode="cover"
-              source={{
-              uri: photo,
-            }}
+              source={{ uri: photo}}
             alt={`${title} poster`}
     
     />

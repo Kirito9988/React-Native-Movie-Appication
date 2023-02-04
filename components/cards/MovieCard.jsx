@@ -11,7 +11,7 @@ export const MovieCard = ({ movie, navigation }) => {
     
     releaseDate={movie.release_date}
     
-    uri={`${tmdbImageUrl}${movie.poster_path}`}
+    uri={movie.poster_path == null || movie.poster_path == undefined ? 'https://dummyimage.com/900x900/878787/ffffff&text=No+Poster+found' : `${tmdbImageUrl}${movie.poster_path}`}
     
     onDetailPress={() => {
     
